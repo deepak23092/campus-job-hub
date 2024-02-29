@@ -2,7 +2,7 @@ import React from 'react';
 import LoginSignupContext from './loginSignupContext';
 
 const LoginSignupState = (props) => {
-    const host = 'http://127.0.0.1:3000';
+    const host = 'https://campus-jobhub.vercel.app';
 
     const loginDetails = async (email, password) => {
         try {
