@@ -9,6 +9,7 @@ app.use(express.json());
 app.use(cors());
 
 const PORT = process.env.PORT || 3000;
+const HOST = process.env.DB_HOST;
 
 app.use(bodyParser.json());
 
@@ -20,5 +21,5 @@ app.get("/", async (req, res) => {
 })
 
 app.listen(PORT, () => {
-    console.log(`Server is running on http://127.0.0.1:${PORT}`);
+    console.log(`Server is running on http://HOST:${PORT}`);
 })
