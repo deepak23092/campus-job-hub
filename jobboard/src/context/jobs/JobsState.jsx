@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 
 const JobsState = (props) => {
 
-    let host = "https://campus-jobhub.vercel.app";
+    let host = "https://campus-jobhub.vercel.app/";
 
     const jobsInitial = [];
     const [jobs, setJobs] = useState(jobsInitial);
