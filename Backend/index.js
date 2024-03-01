@@ -13,7 +13,7 @@ const HOST = process.env.DB_HOST;
 app.use(bodyParser.json());
 
 app.use(cors({
-    origin: 'https://campus-job-hub.vercel.app',
+    origin: '*',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
     allowedHeaders: 'Content-Type, auth-Token'
