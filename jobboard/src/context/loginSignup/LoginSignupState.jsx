@@ -9,8 +9,9 @@ const LoginSignupState = (props) => {
             const response = await fetch(`${host}/company/login`, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
+                    'Content-Type': 'application/json'
                 },
+                credentials: 'include',
                 body: JSON.stringify({ email, password }),
             });
             const json = await response.json();
@@ -31,6 +32,7 @@ const LoginSignupState = (props) => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
+                credentials: 'include',
                 body: JSON.stringify({ name, email, password, confirmPassword, description, website }),
             });
             const json = await response.json();

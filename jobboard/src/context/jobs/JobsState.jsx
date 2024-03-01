@@ -27,6 +27,7 @@ const JobsState = (props) => {
                 headers: {
                     "auth-Token": authToken, // Include the authToken in headers
                 },
+                credentials: 'include'
             });
 
             if (response.ok) {
@@ -52,6 +53,7 @@ const JobsState = (props) => {
                     "Content-Type": "application/json",
                     'auth-Token': authToken, // Include the authToken in headers
                 },
+                credentials: 'include',
                 body: JSON.stringify({ title, location, salary, other_role })
             });
 
@@ -81,6 +83,7 @@ const JobsState = (props) => {
 
             const response = await fetch(url, {
                 method: "GET",
+                credentials: 'include'
             });
 
             if (response.ok) {
@@ -105,6 +108,7 @@ const JobsState = (props) => {
                     "Content-Type": "application/json",
                     'auth-Token': authToken,
                 },
+                credentials: 'include'
             });
 
             if (response.ok) {
